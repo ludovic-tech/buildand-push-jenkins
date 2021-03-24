@@ -14,7 +14,7 @@ node {
 
     stage('Run') {
           img.withRun("--name run-$BUILD_ID -p 9000:80") { c ->
-            sh 'curl 172.17.0.1:9000'
+            #sh 'curl 172.17.0.1:9000'
           }
     }
 
