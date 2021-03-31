@@ -23,6 +23,18 @@ node {
               img.push()
           }
     }
+    stage('Deploy - Clone') {
+          git 'https://github.com/priximmo/jenkins-ansible-docker.git'
+    }
+    stage('Deploy - End') {
+      ansiblePlaybook (
+          colorized: true,
+          become: true,
+          playbook: 'playbook.yml',
+          inventory: 'hosts.yml',
+          extras: "--extra-vars 'image=$IMAGE'"
+      )
+    }
 
 }
 
