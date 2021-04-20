@@ -1,7 +1,7 @@
 
 node {
 
-   def registryProjet='registry.gitlab.com/ludovic-tech/kubernets'
+   def registryProjet='localhost:5000'
    def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
