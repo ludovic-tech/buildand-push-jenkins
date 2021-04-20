@@ -1,8 +1,8 @@
 
 node {
 
-   def registryProjet='localhost:5000'
-   def IMAGE="${registryProjet}/version-${env.BUILD_ID}"
+   def registryProjet='localhost:5000/'
+   def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
           checkout scm
