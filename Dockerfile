@@ -1,4 +1,4 @@
 FROM nginx:latest
-RUN sed -i 's/nginx/to Jenkins via Webhook/g' /usr/share/nginx/html/index.html
+RUN sed -i 's/nginx/Push image via Jenkins/g' /usr/share/nginx/html/index.html
 EXPOSE 80
 
