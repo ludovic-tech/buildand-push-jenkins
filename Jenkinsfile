@@ -2,7 +2,7 @@ def pipelineContext = [:]
 node {
 
    def registryProjet='localhost/'
-   def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
+   def IMAGE="${registryProjet}apache:version-${env.BUILD_ID}"
 
     stage('Clone') {
           checkout scm
