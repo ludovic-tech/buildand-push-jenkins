@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-          docker.withRegistry('$registryProjet', 'registry_id') {
+          docker.withRegistry("$registryProjet", 'registry_id') {
               img.push()
           }
     }
