@@ -1,8 +1,8 @@
-
+def pipelineContext = [:]
 node {
 
-   def registryProjet='localhost'
-   def IMAGE="${registryProjet}version-${env.BUILD_ID}"
+   def registryProjet='localhost/'
+   def IMAGE="${registryProjet}:version-${env.BUILD_ID}"
 
     stage('Clone') {
           checkout scm
@@ -13,15 +13,17 @@ node {
     }
 
     stage('Run') {
-          img.withRun("--name run-$BUILD_ID -p 22301:80") { c ->
-                }
+          img.withRun("--name run-$BUILD_ID -p 80:80") { c ->
+            sh 'curl localhost'
+          }
     }
 
     stage('Push') {
-          docker.withRegistry('localhost', 'registry_id') {
+          docker.withRegistry('https://localhost', 'registry_id') {
+              img.push 'latest'
               img.push()
           }
     }
-   
+
 }
 
