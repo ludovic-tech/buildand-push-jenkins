@@ -1,7 +1,7 @@
 
 node {
 
-   def registryProjet='localhost:5000/'
+   def registryProjet='localhost/'
    def IMAGE="${registryProjet}version-${env.BUILD_ID}"
 
     stage('Clone') {
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-          docker.withRegistry('localhost:5000/', 'registry_id') {
+          docker.withRegistry('localhost/', 'registry_id') {
               img.push()
           }
     }
