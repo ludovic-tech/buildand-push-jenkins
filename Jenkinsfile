@@ -8,7 +8,7 @@ node {
           checkout scm
     }
 
-    def img = stage('Build') {
+    stage('Build') {
           docker.build("$IMAGE",  '.')
     }
 
@@ -18,11 +18,10 @@ node {
     }
 
     stage('Push') {
-          docker.withRegistry('https://localhost:5000', 'registry_id') {
+          docker.withRegistry('$registryProjet', 'registry_id') {
               img.push()
           }
     }
    
-
 }
 
