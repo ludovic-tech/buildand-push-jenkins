@@ -1,7 +1,7 @@
 def pipelineContext = [:]
 node {
 
-   def registryProjet='localhost:5000/'
+   def registryProjet='quenec/'
    def IMAGE="${registryProjet}apache:version-${env.BUILD_ID}"
 
     stage('Clone') {
@@ -19,7 +19,7 @@ node {
     }
 
     stage('Push') {
-          docker.withRegistry('https://localhost:5000', 'registry_id') {
+          docker.withRegistry('https://registry.hub.docker.com', 'registry_id') {
               img.push 'latest'
               img.push()
           }
