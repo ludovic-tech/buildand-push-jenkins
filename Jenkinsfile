@@ -1,4 +1,3 @@
-def pipelineContext = [:]
 node {
 
    def registryProjet='quenec/'
