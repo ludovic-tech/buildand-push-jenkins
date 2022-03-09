@@ -1,7 +1,7 @@
 node {
 
    def registryProjet='quenec/'
-   def IMAGE="${registryProjet}apache:versionJenkins-${env.BUILD_ID}"
+   def IMAGE="${registryProjet}jenkins:versionJenkins-${env.BUILD_ID}"
 
     stage('Clone') {
           checkout scm
