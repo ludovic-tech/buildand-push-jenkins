@@ -23,6 +23,7 @@ node {
               img.push()
           }
         sh 'docker-compose config'
+        sh 'docker-compose up --detach'
     }
 
 }
