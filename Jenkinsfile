@@ -22,8 +22,6 @@ node {
               img.push 'latest'
               img.push()
           }
-        sh 'docker-compose config'
-        sh 'docker-compose up --detach'
     }
 
 }
