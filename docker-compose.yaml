@@ -1,5 +1,5 @@
 version: '3.8'
 
-service:
+services:
   web0:
    image: nginx
