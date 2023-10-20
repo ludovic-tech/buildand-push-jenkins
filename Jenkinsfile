@@ -9,6 +9,7 @@ node {
 
     def img = stage('Build') {
           docker.build("$IMAGE",  '.')
+          sh echo $img
     }
 
     stage('Run') {
