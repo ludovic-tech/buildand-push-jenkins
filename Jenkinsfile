@@ -9,8 +9,7 @@ node {
 
     def img = stage('Build') {
           docker.build("$IMAGE",  '.')
-          sh echo $img
-    }
+          }
 
     stage('Run') {
           img.withRun("--name run-$BUILD_ID -p 8999:80") { c ->
