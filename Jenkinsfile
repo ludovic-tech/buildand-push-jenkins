@@ -1,7 +1,7 @@
 node {
 
-   def registryProjet='formation/'
-   def IMAGE="${registryProjet}app:${version}"
+   def registryProjet='ludo-app/'
+   def IMAGE="${registryProjet}app:3.8"
 
     stage('Clone') {
           checkout scm
@@ -12,7 +12,7 @@ node {
           }
 
     stage('Run') {
-          img.withRun("--name run-$BUILD_ID -p 8999:80") { c ->
+          img.withRun("--name run-$BUILD_ID") { c ->
        
           }
     }
