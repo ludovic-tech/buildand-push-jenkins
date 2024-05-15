@@ -1,7 +1,7 @@
 node {
 
-   def registryProjet='forma-ludo/'
-   def IMAGE="${registryProjet}app:${version}"
+   def registryProjet='buildjenkins/'
+   def IMAGE="${registryProjet}app:3.8"
 
     stage('Clone') {
           checkout scm
@@ -24,7 +24,7 @@ node {
           }
     }
    stage('compuse_up') {
-       sh 'docker compose up --detach'   
+       sh 'docker compose up --detach'
     }
 
 }
