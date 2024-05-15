@@ -3,7 +3,7 @@ version: '2.4'
 services:
   web0:
    image: nginx
-   container_name: from_jenkins_web0
+   container_name: from_jenkinsWeb2
   web1:
    image: nginx
-   container_name: from_jenkins_web1
+   container_name: from_jenkinsWeb1
