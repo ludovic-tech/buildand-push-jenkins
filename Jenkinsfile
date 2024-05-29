@@ -1,6 +1,6 @@
 node {
 
-   def registryProjet='jenkins_ludo/'
+   def registryProjet='${depots}/'
    def IMAGE="${registryProjet}app:${version}"
 
     stage('Clone') {
