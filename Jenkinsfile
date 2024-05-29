@@ -1,7 +1,7 @@
 node {
 
    def registryProjet='jenkins_ludo/'
-   def IMAGE="${registryProjet}app:3.9"
+   def IMAGE="${registryProjet}app:${version}"
 
     stage('Clone') {
           checkout scm
