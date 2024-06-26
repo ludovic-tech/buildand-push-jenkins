@@ -1,7 +1,7 @@
 node {
 
 
-   def IMAGE="${depots}/app:${version}"
+   def IMAGE="formation/app:3.5"
 
     stage('Clone') {
           checkout scm
