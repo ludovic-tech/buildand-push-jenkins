@@ -2,8 +2,8 @@ node {
 
 
    
-   def PROJECT="from-jenkins"
-   def IMAGE="$PROJECT/app:2.5"
+   
+   def IMAGE="$project/app:$version"
    
     stage('Clone') {
           checkout scm
