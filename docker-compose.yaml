@@ -1,7 +1,7 @@
 services:
   web0:
    image: nginx
-   container_name: from_jenkinsWeb2
+   container_name: from_jenkinsWeb22
   web1:
    image: nginx
-   container_name: from_jenkinsWeb1
+   container_name: from_jenkinsWeb12
