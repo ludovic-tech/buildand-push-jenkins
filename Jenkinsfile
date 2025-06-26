@@ -23,6 +23,7 @@ node {
           }
     }
    stage('compuse_up') {
+      sh 'docker-compose down '
        sh 'docker-compose up -d'
     }
 
