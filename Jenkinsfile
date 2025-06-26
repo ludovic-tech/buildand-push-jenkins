@@ -1,7 +1,7 @@
 node {
    
    def PROJECT="forma-ludo"
-   def IMAGE="$PROJECT/app:4.6"
+   def IMAGE="$PROJECT/app:$VERSION"
    
     stage('Clone') {
           checkout scm
