@@ -1,7 +1,7 @@
 services:
   web0:
-   image: app:latest
+   image: nginx:latest
    container_name: from_jenkinsWeb00
   web1:
-   image: app:latest
+   image: nginx:latest
    container_name: from_jenkinsWeb01
