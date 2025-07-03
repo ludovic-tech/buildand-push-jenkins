@@ -1,7 +1,7 @@
 node {
    
    def PROJECT="forma-ludo"
-   def IMAGE="$PROJECT/app:$VERSION"
+   def IMAGE="$PROJECT/app:5.6"
    
     stage('Clone') {
           checkout scm
@@ -23,7 +23,7 @@ node {
           }
     }
    stage('compuse_up') {
-      sh 'docker-compose down '
+      sh 'docker compose up --detach '
        sh 'docker-compose up -d'
     }
 
