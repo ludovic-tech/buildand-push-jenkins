@@ -1,7 +1,7 @@
 node {
    
-   def PROJECT="forma-ludo"
-   def IMAGE="$PROJECT/app:5.6"
+   def PROJECT="murilopl19"
+   def IMAGE="$PROJECT/build_push"
    
     stage('Clone') {
           checkout scm
@@ -18,7 +18,7 @@ node {
     }
 
     stage('Push') {
-       docker.withRegistry('https://registry.ludovic.io/' , 'harbor_id') {
+       docker.withRegistry('https://registry.hub.com/' , 'dockerhub_id') {
               img.push()
           }
     }
