@@ -1,7 +1,7 @@
 node {
    
-   def PROJECT="quenec"
-   def IMAGE="$PROJECT/app:8.6"
+   def PROJECT="murilopl19"
+   def IMAGE="$PROJECT/build_push"
    
     stage('Clone') {
           checkout scm
